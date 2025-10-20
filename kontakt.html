@@ -1,105 +1,106 @@
 <!DOCTYPE html>
 <html lang="sv">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt - Sött och Elegant</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Sött och Elegant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  </head>
 
-<body>
+  <body>
 
-  <!-- 🇸🇪 Navigationsmeny / 🇵🇱 Menu nawigacyjne -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Hem</a></li>
-      <li><a href="produkter.html">Produkter</a></li>
-      <li><a href="om_oss.html">Om oss</a></li>
-      <li><a href="galleri.html">Galleri</a></li>
-      <li><a href="kontakt.html" class="active">Kontakt</a></li>
-    </ul>
-  </nav>
-
-  <!-- 🇸🇪 Rubrik för sidan / 🇵🇱 Nagłówek strony -->
-  <header class="subpage-header">
-    <h1>Kontakta oss</h1>
-    <p>Vi älskar att höra från dig! Skicka ett meddelande eller besök oss direkt i butiken.</p>
-  </header>
-
-  <!-- 🇸🇪 Sektion: kontaktinformation / 🇵🇱 Sekcja: dane kontaktowe -->
-  <section class="contact-info">
-    <div class="contact-details">
-      <h2>Vår adress</h2>
-      <p>Sött och Elegant Konditori</p>
-      <p>Storgatan 14, 113 45 Stockholm</p>
-      <p>Sverige</p>
-
-      <h3>Kontaktuppgifter</h3>
-      <p>Telefon: <a href="tel:+46727125252">+46 072 712 52 52</a></p>
-      <p>E-post: <a href="mailto:avvissek@wp.pl">avvissek@wp.pl</a></p>
-
-      <h3>Öppettider</h3>
+    <!-- 🇸🇪 Navigationsmeny / 🇵🇱 Menu nawigacyjne -->
+    <nav>
       <ul>
-        <li>Måndag - Fredag: 08:00 - 18:00</li>
-        <li>Lördag: 09:00 - 16:00</li>
-        <li>Söndag: Stängt</li>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="produkter.html">Produkter</a></li>
+        <li><a href="om_oss.html">Om oss</a></li>
+        <li><a href="galleri.html">Galleri</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <!-- 🇸🇪 Sektion: kontaktformulär / 🇵🇱 Sekcja: formularz kontaktowy -->
-    <div class="contact-form">
-      <h2>Skicka ett meddelande</h2>
-      <form id="contactForm">
-        <label for="from_name">Namn:</label>
-        <input type="text" id="from_name" name="from_name" placeholder="Ditt namn" required>
+    <!-- 🇸🇪 Rubrik för sidan / 🇵🇱 Nagłówek strony -->
+    <header class="subpage-header">
+      <h1>Kontakta oss</h1>
+      <p>Vi älskar att höra från dig! Skicka ett meddelande eller besök oss direkt i butiken.</p>
+    </header>
 
-        <label for="from_email">E-post:</label>
-        <input type="email" id="from_email" name="from_email" placeholder="avvissek@wp.pl" required>
+    <!-- 🇸🇪 Sektion: kontaktinformation / 🇵🇱 Sekcja: dane kontaktowe -->
+    <section class="contact-info">
+      <div class="contact-details">
+        <h2>Vår adress</h2>
+        <p>Sött och Elegant Konditori</p>
+        <p>Storgatan 14, 113 45 Stockholm</p>
+        <p>Sverige</p>
 
-        <label for="message">Meddelande:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här..." required></textarea>
+        <h3>Kontaktuppgifter</h3>
+        <p>Telefon: <a href="tel:+46727125252">+46 072 712 52 52</a></p>
+        <p>E-post: <a href="mailto:avvissek@wp.pl">avvissek@wp.pl</a></p>
 
-        <button type="submit" class="cta">Skicka</button>
-      </form>
+        <h3>Öppettider</h3>
+        <ul>
+          <li>Måndag - Fredag: 08:00 - 18:00</li>
+          <li>Lördag: 09:00 - 16:00</li>
+          <li>Söndag: Stängt</li>
+        </ul>
+      </div>
 
-      <p id="responseMsg"></p>
-    </div>
-  </section>
+      <!-- 🇸🇪 Sektion: kontaktformulär / 🇵🇱 Sekcja: formularz kontaktowy -->
+      <div class="contact-form">
+        <h2>Skicka ett meddelande</h2>
+        <form id="contactForm">
+          <label for="from_name">Namn:</label>
+          <input type="text" id="from_name" name="from_name" placeholder="Ditt namn" required>
 
-  <!-- 🇸🇪 Karta (Google Maps) / 🇵🇱 Sekcja mapy -->
-  <section class="map">
-    <h2>Hitta oss</h2>
-    <iframe src="https://www.google.com/maps?q=Storgatan+14,+Stockholm,+Sweden&output=embed"
-      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </section>
+          <label for="from_email">E-post:</label>
+          <input type="email" id="from_email" name="from_email" placeholder="avvissek@wp.pl" required>
 
-  <!-- 🇸🇪 Sidfot / 🇵🇱 Stopka strony -->
-  <footer>
-    <p>&copy; 2025 Sött och Elegant | Skapat av Arkadiusz Tokarczyk</p>
-  </footer>
+          <label for="message">Meddelande:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Skriv ditt meddelande här..." required></textarea>
 
-  <!-- 🇵🇱 Skrypt EmailJS – wysyłanie wiadomości -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("R60z6T4PDid71LbIm"); // ← Twój public key z EmailJS
-    })();
+          <button type="submit" class="cta">Skicka</button>
+        </form>
 
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+        <p id="responseMsg"></p>
+      </div>
+    </section>
 
-      emailjs.sendForm("service_wp_pl", "template_sweetcontact", this)
-        .then(() => {
-          document.getElementById("responseMsg").innerText = "✅ Tack! Ditt meddelande har skickats.";
-          this.reset();
-        }, (error) => {
-          document.getElementById("responseMsg").innerText = "❌ Fel: " + JSON.stringify(error);
-        });
-    });
-  </script>
+    <!-- 🇸🇪 Karta (Google Maps) / 🇵🇱 Sekcja mapy -->
+    <section class="map">
+      <h2>Hitta oss</h2>
+      <iframe src="https://www.google.com/maps?q=Storgatan+14,+Stockholm,+Sweden&output=embed" width="100%" height="350"
+        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
 
-</body>
+    <!-- 🇸🇪 Sidfot / 🇵🇱 Stopka strony -->
+    <footer>
+      <p>&copy; 2025 Sött och Elegant | Skapat av Arkadiusz Tokarczyk</p>
+    </footer>
+
+    <!-- 🇵🇱 Skrypt EmailJS – wysyłanie wiadomości -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("R60z6T4PDid71LbIm"); // ← Twój public key z EmailJS
+      })();
+
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_wp_mail", "template_cmus0ca", this)
+
+          .then(() => {
+            document.getElementById("responseMsg").innerText = "✅ Tack! Ditt meddelande har skickats.";
+            this.reset();
+          }, (error) => {
+            document.getElementById("responseMsg").innerText = "❌ Fel: " + JSON.stringify(error);
+          });
+      });
+    </script>
+
+  </body>
+
 </html>
-
