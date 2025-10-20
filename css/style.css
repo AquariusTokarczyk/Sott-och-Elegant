@@ -1,0 +1,448 @@
+/* 🇸🇪 Grundinställningar för hela sidan */
+/* 🇵🇱 Ustawienia bazowe dla całej strony */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #fffaf7;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+/* 🇸🇪 Länkar och knappar */
+/* 🇵🇱 Linki i przyciski */
+a {
+  text-decoration: none;
+  color: #d15f27;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff8c42;
+}
+
+/* 🇸🇪 Navigationsmeny */
+/* 🇵🇱 Pasek nawigacyjny */
+nav {
+  background-color: #fff3ea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+}
+
+nav li {
+  margin: 0 1.5rem;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+nav a.active,
+nav a:hover {
+  color: #d15f27;
+}
+
+/* 🇸🇪 Hjältesektion (förstasidan) */
+/* 🇵🇱 Sekcja główna (hero) */
+.hero {
+  background: url("../images/cake_look.jpeg") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.cta {
+  background-color: #d15f27;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background-color: #ff8c42;
+}
+
+.cta.ghost {
+  background-color: transparent;
+  border: 2px solid #d15f27;
+  color: #d15f27;
+}
+
+.cta.ghost:hover {
+  background-color: #d15f27;
+  color: white;
+}
+
+/* 🇸🇪 Sektioner på undersidor */
+/* 🇵🇱 Sekcje na podstronach */
+.subpage-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #ffece1;
+  color: #2c2c2c;
+}
+
+.subpage-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 🇸🇪 Allmän textsektion */
+/* 🇵🇱 Sekcje tekstowe */
+.intro,
+.featured,
+.product-cection,
+.about-wrap,
+.contact-info,
+.gallery.cta {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* 🇵🇱 Produkty/Featured – wyśrodkowanie nagłówków i opisów */
+/* 🇸🇪 Produkter/Featured – centrering av rubriker och texter */
+.product-section,
+.featured {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.product-section h2,
+.featured {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.product-section p,
+.featured p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+/* 🇸🇪 Galleri (bilder) – uppdaterad version */
+/* 🇵🇱 Galeria zdjęć – zmniejszona wersja */
+.gallery,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  justify-items: center;
+}
+
+.gallery img,
+.gallery-grid img {
+  width: 100%;
+  max-width: 280px;
+  /* maksymalna szerokość zdjęcia */
+  height: 220px;
+  /* wysokość miniatury */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery img:hover,
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.gallery img:hover,
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* 🇸🇪 Figcaption (bildtext) */
+/* 🇵🇱 Podpis pod zdjęciem */
+figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* 🇸🇪 Om oss - layout */
+/* 🇵🇱 Sekcja O nas */
+.about-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+  flex: 1;
+  max-width: 280px;
+}
+
+.quote {
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #d15f27;
+}
+
+.goals {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/* 🇸🇪 Kontaktformulär */
+/* 🇵🇱 Formularz kontaktowy */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-details,
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* 🇸🇪 Karta Google */
+/* 🇵🇱 Mapa Google */
+.map {
+  max-width: 1100px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.map iframe {
+  border-radius: 12px;
+}
+
+/* 🇸🇪 Sidfot */
+/* 🇵🇱 Stopka */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff3ea;
+  color: #444;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* 🇸🇪 Responsiv design (mobilanpassning) */
+/* 🇵🇱 Styl responsywny (dla telefonów) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .gallery img,
+  .gallery-grid img {
+    height: 200px;
+  }
+
+  /* 🇸🇪 Lightbox-stil */
+  /* 🇵🇱 Styl powiększenia zdjęć po kliknięciu */
+  .lightbox {
+    display: none;
+    /* ukryty domyślnie */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .lightbox img {
+    max-width: 450px;
+    max-height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+  }
+
+  .lightbox.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* 🇵🇱 Galeria – zmniejszenie i wyrównanie zdjęć */
+  /* 🇸🇪 Galleri – minska och justera bilder */
+
+
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Efekt powiększenia po najechaniu */
+/* Effekt vid hovring */
+.gallery img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+/* 🇸🇪 Utvalda bakverk – centrering och layout */
+/* 🇵🇱 Wyrównanie i układ sekcji z polecanymi wypiekami */
+.featured {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.featured h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.featured .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.featured figure {
+  text-align: center;
+}
+
+.featured figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.featured figcaption a {
+  color: #d15f27;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.featured figcaption a:hover {
+  color: #ff8c42;
+  text-decoration: underline;
+}
+

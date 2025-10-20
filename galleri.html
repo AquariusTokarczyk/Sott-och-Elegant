@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale1.0>
+    <title>Galleri - Sött och Elegant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  </head>
+
+
+
+
+  <body>
+
+    <!-- 🇸🇪 Navigationsmeny -->
+    <!-- 🇵🇱 Menu nawigacyjne -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="produkter.html">Produkter</a></li>
+        <li><a href="om_oss.html">Om oss</a></li>
+        <li><a href="galleri.html">Galleri</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- 🇸🇪 Rubrik för sidan -->
+    <!-- 🇵🇱 Nagłówek strony -->
+    <header class="subpage-header">
+      <h1>Galleri</h1>
+      <p>En bild säger mer än tusen ord - upptäck våra bakverk med ögonen</p>
+    </header>
+
+    <!-- 🇸🇪 Sektion med fotogalleri -->
+    <!-- 🇵🇱 Sekcja z galerią zdjęć -->
+    <section class="gallery-grid">
+      <figure>
+        <img src="images/chocolate-layer-cake-882524_1920.jpg" alt="Chokladtårta med hallon">
+        <figcaption>Chokladtårta med hallon</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cake-1145609_1920.jpg" alt="Bröllopstårta med vit glasyr">
+        <figcaption>Bröllopstårta med vit glasyr</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/strawberries-2357171_1920.jpg" alt="Jordgubbstårta med blåbär">
+        <figcaption>Jordgubbstårta med blåbär</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/brownie-548591_1920.jpg" alt="Kladdkaka med choklad">
+        <figcaption>Kladdkaka med choklad</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cupcake-862646_1920.jpg" alt="Cupcake med rosa glasyr">
+        <figcaption>Cupcake med rosa glasyr</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cupcake-2250355_1920.jpg" alt="Vaniljcupcake med chokladtopp">
+        <figcaption>Vaniljcupcake med chokladtopp</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cupcakes-862649_1920.jpg" alt="Assorterade cupcakes">
+        <figcaption>Assorterade cupcakes</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/cake-pops-1398941_1920.jpg" alt="Cake pops med strössel">
+        <figcaption>Cake pops med strössel</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/paper-1731726_1920.jpg" alt="Små tårtor med dekoration">
+        <figcaption>Små tårtor med dekoration</figcaption>
+      </figure>
+    </section>
+
+    <!-- 🇸🇪 Sektion: länk till produkter -->
+    <!-- 🇵🇱 Sekcja: odnośnik do oferty -->
+    <section class="gallery-cta">
+      <p>Vill du se fler smaker? Besök vår sida med <a href="produkter.html">produkter</a></p>
+    </section>
+
+    <!-- 🇸🇪 Sidfot -->
+    <!-- 🇵🇱 Stopka strony -->
+    <footer>
+      <p>&copy; 2025 Sött och Elegant | Skapat av Arkadiusz Tokarczyk</p>
+    </footer>
+
+    <script>
+      // 🇵🇱 Tworzy efekt powiększania zdjęć w galerii
+      // 🇸🇪 Skapar förstoringseffekt för bilder
+      const images = document.querySelectorAll('.gallery img, .gallery-grid img');
+      const lightbox = document.createElement('div');
+      lightbox.classList.add('lightbox');
+      document.body.appendChild(lightbox);
+
+      const img = document.createElement('img');
+      lightbox.appendChild(img);
+
+      images.forEach(image => {
+        image.addEventListener('click', () => {
+          img.src = image.src;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+      });
+    </script>
+
+  </body>
+
+</html>

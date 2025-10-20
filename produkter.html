@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkter - Sött och Elegant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image.png" href="images/favicon.png">
+  </head>
+
+  <body>
+
+    <!-- 🇸🇪 Navigationsmeny -->
+    <!-- 🇵🇱 Menu nawigacyjne -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="produkter.html>" class="active">Produkter</a></li>
+        <li><a href="om_oss.html">Om oss</a></li>
+        <li><a href="galleri.html">Galleri</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- 🇸🇪 Huvudrubrik -->
+    <!-- 🇵🇱 Nagłówek główny -->
+    <header class="subpage-header">
+      <h1>Våra produkter</h1>
+      <p>Från klassiska tårtor till moderna cupcakes - bakat med hjärta och smak.</p>
+    </header>
+
+    <!-- 🇸🇪 Sektion med produktkategorier -->
+    <!-- 🇵🇱 Sekcja z kategoriami produktów -->
+    <section class="product-section">
+      <h2>Tårtor</h2>
+      <div class="gallery">
+        <img src="images/chocolate-layer-cake-882524_1920.jpg" alt="Chokladtårta med bär">
+        <img src="images/cake-1145609_1920.jpg" alt="Bröllopstårta med liljor">
+        <img src="images/strawberries-2357171_1920.jpg" alt="Jordgubbstårta med blåbär">
+      </div>
+      <p>Våra tårtor är handgjorda med färska ingredienser - perfekta för födelsdagar, bröllop och festliga tillfällen.
+      </p>
+    </section>
+
+    <section class="product-section">
+      <h2>Cupcakes</h2>
+      <div class="gallery">
+        <img src="images/cupcake-862646_1920.jpg" alt="Cupcake med rosa glasyr">
+        <img src="images/cupcake-2250355_1920.jpg" alt="Vanilijcupcake med choklad">
+        <img src="images/cupcakes-862649_1920.jpg" alt="Assorterade cupcakes med dekoration">
+      </div>
+      <p>Våra cupcakes kombinerar klassiska smaker med kreativ dekoration - små konstverk i varjetugga.</p>
+    </section>
+
+    <section class="product-section">
+      <h2>Småkakor & godsaker</h2>
+      <div class="gallery">
+        <img src="images/brownie-548591_1920.jpg" alt="Kladdkaka med chokladsås">
+        <img src="images/cake-pops-1398941_1920.jpg" alt="Cake pops med strössel">
+        <img src="images/paper-1731726_1920.jpg" alt="Små tårtor med dekoration">
+      </div>
+      <p>För vardagens fika eller speciella stunder - våra småkakor och sötsaker ger glädje till varje stund.</p>
+    </section>
+
+    <!-- 🇸🇪 Sidfot -->
+    <!-- 🇵🇱 Stopka strony -->
+    <footer>
+      <p>&copy; 2025 Sött och Elegant | Skapat av Arkadiusz Tokarczyk</p>
+    </footer>
+
+    <script>
+      // 🇵🇱 Tworzy efekt powiększania zdjęć w galerii
+      // 🇸🇪 Skapar förstoringseffekt för bilder
+      const images = document.querySelectorAll('.gallery img, .gallery-grid img');
+      const lightbox = document.createElement('div');
+      lightbox.classList.add('lightbox');
+      document.body.appendChild(lightbox);
+
+      const img = document.createElement('img');
+      lightbox.appendChild(img);
+
+      images.forEach(image => {
+        image.addEventListener('click', () => {
+          img.src = image.src;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+      });
+    </script>
+
+  </body>
+
+</html>
